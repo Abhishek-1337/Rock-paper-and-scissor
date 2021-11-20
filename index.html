@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rock paper and scissor</title>
+    <link rel="stylesheet" href="dist/css/main.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+</head>
+<body>
+    <main>
+        <div class="score">
+            <div class="score__player">
+                <h2>Player 1</h2>
+                <p>0</p>
+            </div>
+            <div class="score__computer">
+                <h2>Computer</h2>
+                <p>0</p>
+            </div>
+        </div>
+        <div class="intro">
+            <h1>Rock paper and scissor</h1>
+            <div class="playBtn btn-p">Let's play</div>
+        </div>
+        <div class="gameDisplay fadeOut">
+            <h2 class="winner">Choose an option</h2>
+            <div class="gameImages">
+                <img class="player__hand" src="dist/images/paper.png" alt="No images available" class="src">
+                <img class="computer__hand" src="dist/images/rock.png" alt="No images available" class="src">
+            </div>
+            <div class="selectBtn">
+                <div class="rock btn-s" >rock</div>
+                <div class="paper btn-s" >paper</div>
+                <div class="scissor btn-s" >scissors</div>
+            </div>
+        </div>
+    </main>
+    <script src="dist/js/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,181 @@
+@import 'reset';
+
+main{
+   
+    background-color: rgb(32, 32, 59);
+    color:white;
+    height:100vh;
+    .score{
+        height:20vh;
+        display:flex;
+        justify-content:space-around;
+        align-items: center;
+
+        &__player,&__computer{
+            
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+            height:10vh;
+
+           p{
+              
+               font-size: 1.2rem;
+           }
+        }
+    
+    }
+    
+    .intro{
+        height:25vh;
+        padding-top: 2rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        transition:opacity 0.5s ease 0.1s;
+
+        &.fadeOut{
+            opacity:0;
+            pointer-events: none;
+        }
+         
+        .btn-p{
+            cursor: pointer;
+            width:9rem;
+            height:2.8rem;
+            font-size:1.5rem;
+            display:flex;
+            align-items: center;
+            justify-content: center;
+            border: 2px solid rgb(163, 163, 105);;
+            border-radius: 2px;;
+            background-color: rgb(19, 143, 19);
+
+            &:hover  {
+                transform: translateY(-2px);
+                box-shadow: 1px 1px 5px rgb(233, 184, 184);
+                border: 2px solid rgb(241, 241, 229);
+                transition:0.1s ease-in;
+            }
+        }
+    }
+
+
+
+    .gameDisplay{
+        display:flex;
+        flex-direction:column;
+        justify-content: space-around;
+        align-items: center;
+        opacity:0;
+        pointer-events: none;
+        transition:opacity 0.5s ease 0.4s;
+
+        &.fadeIn{
+            opacity:1;
+            transform:translateY(-170px);
+            pointer-events: all;
+        }
+
+       .winner{
+           font-size: 1.8rem;;
+       }
+
+        .selectBtn{
+            padding-top: 2rem;
+            width:50%;
+            display:flex;
+            justify-content: space-around;
+
+            .btn-s{
+                cursor: pointer;
+                font-weight:300;
+                width:6rem;
+                height:3rem;
+                display:flex;
+                align-items: center;
+                justify-content: center;
+                border: 2px solid rgb(163, 163, 105);;
+                border-radius: 2px;;
+                background-color: rgb(48, 92, 48);
+                font-size:1.2rem;
+
+                &:hover  {
+                    transform: translateY(-2px);
+                    box-shadow: 1px 1px 5px rgb(233, 184, 184);
+                    border: 2px solid rgb(241, 241, 229);
+                    transition:0.1s ease-in;
+                }
+            }
+        }
+        .gameImages{
+            width:60%;
+            display:flex;
+            justify-content: space-around;
+            .player__hand{
+                transform: rotateY(180deg);
+            }
+        }
+    }
+}   
+
+@keyframes shakePlayer {
+    10%{
+        transform:rotateY(180deg) translateY(0px);
+    }
+    25%{
+        transform:rotateY(180deg) translateY(-50px);
+    }
+    35%{
+        transform:rotateY(180deg) translateY(0px);
+    }
+    45%{
+        transform:rotateY(180deg) translateY(-50px);
+    }
+    55%{
+        transform:rotateY(180deg) translateY(0px);
+    }
+    65%{
+        transform:rotateY(180deg) translateY(-50px);
+    }
+    75%{
+        transform:rotateY(180deg) translateY(0px);
+    }
+    85%{
+        transform:rotateY(180deg) translateY(-50px);
+    }
+    100%{
+        transform:rotateY(180deg) translateY(0px);
+    }
+}
+@keyframes shakeCom {
+    10%{
+        transform: translateY(0px);
+    }
+    25%{
+        transform: translateY(-50px);
+    }
+    35%{
+        transform: translateY(0px);
+    }
+    45%{
+        transform: translateY(-50px);
+    }
+    55%{
+        transform: translateY(0px);
+    }
+    65%{
+        transform: translateY(-50px);
+    }
+    75%{
+        transform: translateY(0px);
+    }
+    85%{
+        transform:translateY(-50px);
+    }
+    100%{
+        transform: translateY(0px);
+    }
+}

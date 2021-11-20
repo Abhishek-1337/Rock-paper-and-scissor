@@ -1,0 +1,230 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+ul {
+  list-style: none;
+}
+
+main {
+  background-color: #20203b;
+  color: white;
+  height: 100vh;
+}
+main .score {
+  height: 20vh;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+main .score__player, main .score__computer {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  height: 10vh;
+}
+main .score__player p, main .score__computer p {
+  font-size: 1.2rem;
+}
+main .intro {
+  height: 25vh;
+  padding-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  transition: opacity 0.5s ease 0.1s;
+}
+main .intro.fadeOut {
+  opacity: 0;
+  pointer-events: none;
+}
+main .intro .btn-p {
+  cursor: pointer;
+  width: 9rem;
+  height: 2.8rem;
+  font-size: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid #a3a369;
+  border-radius: 2px;
+  background-color: #138f13;
+}
+main .intro .btn-p:hover {
+  transform: translateY(-2px);
+  box-shadow: 1px 1px 5px #e9b8b8;
+  border: 2px solid #f1f1e5;
+  transition: 0.1s ease-in;
+}
+main .gameDisplay {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.5s ease 0.4s;
+}
+main .gameDisplay.fadeIn {
+  opacity: 1;
+  transform: translateY(-170px);
+  pointer-events: all;
+}
+main .gameDisplay .winner {
+  font-size: 1.8rem;
+}
+main .gameDisplay .selectBtn {
+  padding-top: 2rem;
+  width: 50%;
+  display: flex;
+  justify-content: space-around;
+}
+main .gameDisplay .selectBtn .btn-s {
+  cursor: pointer;
+  font-weight: 300;
+  width: 6rem;
+  height: 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid #a3a369;
+  border-radius: 2px;
+  background-color: #305c30;
+  font-size: 1.2rem;
+}
+main .gameDisplay .selectBtn .btn-s:hover {
+  transform: translateY(-2px);
+  box-shadow: 1px 1px 5px #e9b8b8;
+  border: 2px solid #f1f1e5;
+  transition: 0.1s ease-in;
+}
+main .gameDisplay .gameImages {
+  width: 60%;
+  display: flex;
+  justify-content: space-around;
+}
+main .gameDisplay .gameImages .player__hand {
+  transform: rotateY(180deg);
+}
+
+@-webkit-keyframes shakePlayer {
+  10% {
+    transform: rotateY(180deg) translateY(0px);
+  }
+  25% {
+    transform: rotateY(180deg) translateY(-50px);
+  }
+  35% {
+    transform: rotateY(180deg) translateY(0px);
+  }
+  45% {
+    transform: rotateY(180deg) translateY(-50px);
+  }
+  55% {
+    transform: rotateY(180deg) translateY(0px);
+  }
+  65% {
+    transform: rotateY(180deg) translateY(-50px);
+  }
+  75% {
+    transform: rotateY(180deg) translateY(0px);
+  }
+  85% {
+    transform: rotateY(180deg) translateY(-50px);
+  }
+  100% {
+    transform: rotateY(180deg) translateY(0px);
+  }
+}
+
+@keyframes shakePlayer {
+  10% {
+    transform: rotateY(180deg) translateY(0px);
+  }
+  25% {
+    transform: rotateY(180deg) translateY(-50px);
+  }
+  35% {
+    transform: rotateY(180deg) translateY(0px);
+  }
+  45% {
+    transform: rotateY(180deg) translateY(-50px);
+  }
+  55% {
+    transform: rotateY(180deg) translateY(0px);
+  }
+  65% {
+    transform: rotateY(180deg) translateY(-50px);
+  }
+  75% {
+    transform: rotateY(180deg) translateY(0px);
+  }
+  85% {
+    transform: rotateY(180deg) translateY(-50px);
+  }
+  100% {
+    transform: rotateY(180deg) translateY(0px);
+  }
+}
+@-webkit-keyframes shakeCom {
+  10% {
+    transform: translateY(0px);
+  }
+  25% {
+    transform: translateY(-50px);
+  }
+  35% {
+    transform: translateY(0px);
+  }
+  45% {
+    transform: translateY(-50px);
+  }
+  55% {
+    transform: translateY(0px);
+  }
+  65% {
+    transform: translateY(-50px);
+  }
+  75% {
+    transform: translateY(0px);
+  }
+  85% {
+    transform: translateY(-50px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+@keyframes shakeCom {
+  10% {
+    transform: translateY(0px);
+  }
+  25% {
+    transform: translateY(-50px);
+  }
+  35% {
+    transform: translateY(0px);
+  }
+  45% {
+    transform: translateY(-50px);
+  }
+  55% {
+    transform: translateY(0px);
+  }
+  65% {
+    transform: translateY(-50px);
+  }
+  75% {
+    transform: translateY(0px);
+  }
+  85% {
+    transform: translateY(-50px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}/*# sourceMappingURL=main.css.map */
